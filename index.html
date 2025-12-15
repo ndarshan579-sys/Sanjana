@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ice Cream Paradise</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fffaf0;
+        color: #333;
+    }
+    header {
+        background-color: #ff6f61;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    nav {
+        text-align: center;
+        margin: 10px 0;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+        font-weight: bold;
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: #ff8f81;
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
+    nav a:hover {
+        background-color: #ff3f2e;
+    }
+    .container {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .menu-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        background-color: #fff0f5;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .menu-item img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+    footer {
+        background-color: #ff6f61;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+    /* Hide all sections by default */
+    .page {
+        display: none;
+        text-align: center;
+    }
+    /* Show the active section */
+    .active {
+        display: block;
+    }
+    form {
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid pink;
+        border-radius: 10px;
+        background-color: #f9f9ff;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0,0,255,0.2);
+    }
+    form input, form textarea, form button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    form button {
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    form button:hover {
+        background-color: #ff3f2e;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🍦 Ice Cream Paradise 🍦</h1>
+    <nav>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('login')">Login</a>
+        <a onclick="showPage('menu')">Menu</a>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('feedback')">Feedback</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <h2>Welcome to Ice Cream Paradise!</h2>
+        <p>Welcome to my Ice Cream Website!</p>
+Here you can explore tasty ice creams and fresh, healthy .
+Discover cool flavors, yummy scoops, and fresh fruit juices made just for you.</p>
+         
+        <img src="https://th.bing.com/th/id/OIP.5q40Z93lzEr4WLpLSUrIwQHaEl?w=291&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Delicious Ice Cream" style="display:block; margin: 20px auto; width:300px;">
+        <p>We serve the most delicious ice creams in town. From classic flavors to exotic creations, every scoop is made with love!</p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login" class="page">
+        <h2>Login to Your Account</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page">
+        <h2>Our Delicious Ice Creams</h2>
+        <div class="menu-item">
+            <img src="data:image/webp;base64,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"alt="Vanilla Ice Cream">
+            <div>
+                <h3>Vanilla Delight</h3>
+                <p>Price: Rs.120</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.V8XYsoAuHJn3zKR2spbtegHaFW?w=244&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Chocolate Ice Cream">
+            <div>
+                <h3>Choco Blast</h3>
+                <p>Price: Rs.100</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.7S04c4itLKDlhaOKI9vWBgHaJQ?w=202&h=253&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Strawberry Ice Cream">
+            <div>
+                <h3>Strawberry Swirl</h3>
+                <p>Price: Rs.150</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.TbiTKrJk60qOTuI_miUMnAHaLG?w=202&h=303&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Mint Ice Cream">
+            <div>
+                <h3>Minty Fresh</h3>
+                <p>Price: Rs.130</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <h2>About Ice Cream Paradise</h2>
+        <p>Ice Cream Paradise started with a simple mission: to bring happiness in every scoop. Using fresh ingredients and unique flavors, we create ice creams that make every visit special.</p>
+      
+        <p>Come and enjoy your favorite flavor today!</p>
+        <img src="https://th.bing.com/th/id/OIP.E5FTKJRRvNI5LBvIqmJwZwHaE8?w=296&h=197&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Our Ice Cream Shop" style="display:block; margin: 20px auto; width:300px;">
+    </div>
+
+    <!-- Feedback Page -->
+    <div id="feedback" class="page">
+        <h2>Feedback</h2>
+            <p> Thank you for visiting our Ice Cream & Juice website. Please share your valuable feedback.</p>
+ <p>Your suggestions help us improve. Let us know what you liked or what we can do better.</p>
+<p>Please fill in the form below to share your experience with our products.</p>
+<p>We appreciate your time! Tell us how we can make our website and menu more enjoyable.</p>
+
+    <p>We would love to hear from you! Please share your thoughts and suggestions. </p>
+        <form>
+            <input type="text" placeholder="Enter Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Phone Number" required>
+            <textarea rows="5" placeholder="Send Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Our contact:📞 +91 12345 43215, +91 67877 98076</p>
+        <p>OUR SHOP AVAILABLE IN THE: KARWAR, ANKOLA, KUMATA, HONNAVAR.</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Ice Cream Paradise
+</footer>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
