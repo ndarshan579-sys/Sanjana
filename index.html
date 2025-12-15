@@ -1,208 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ice Cream Paradise</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #fffaf0;
-        color: #333;
-    }
-    header {
-        background-color: #ff6f61;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
-    nav {
-        text-align: center;
-        margin: 10px 0;
-    }
-    nav a {
-        text-decoration: none;
-        color: white;
-        margin: 0 15px;
-        font-weight: bold;
-        padding: 8px 15px;
-        border-radius: 5px;
-        background-color: #ff8f81;
-        transition: background-color 0.3s;
-        cursor: pointer;
-    }
-    nav a:hover {
-        background-color: #ff3f2e;
-    }
-    .container {
-        width: 80%;
-        margin: 20px auto;
-    }
-    .menu-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-        background-color: #fff0f5;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    .menu-item img {
-        width: 120px;
-        height: 120px;
-        border-radius: 10px;
-        margin-right: 20px;
-    }
-    footer {
-        background-color: #ff6f61;
-        color: white;
-        text-align: center;
-        padding: 15px 0;
-        margin-top: 20px;
-    }
-    /* Hide all sections by default */
-    .page {
-        display: none;
-        text-align: center;
-    }
-    /* Show the active section */
-    .active {
-        display: block;
-    }
-    form {
-        margin: 20px auto;
-        padding: 20px;
-        border: 1px solid pink;
-        border-radius: 10px;
-        background-color: #f9f9ff;
-        width: 300px;
-        box-shadow: 0 0 10px rgba(0,0,255,0.2);
-    }
-    form input, form textarea, form button {
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 8px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-    form button {
-        background-color: #ff6f61;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-    form button:hover {
-        background-color: #ff3f2e;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Vogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #222;
+            text-align:center;
+        }
+        h1, h2, h3 {
+            text-align:center;
+        }
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #333;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .product-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-item img {
+            width: 190px;
+            height: 270px;
+            border-radius: 10px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        
+        .page {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+
+        
+        .form-container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-container input, 
+        .form-container textarea {
+            width:90%;
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 10px;
+            border: 1px solid pink;
+            
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #111;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+        .form-container button:hover {
+            background-color: #333;
+        }
+        .lo
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>🍦 Ice Cream Paradise 🍦</h1>
+    <h1>👗 Fashion Vogue 👠</h1>
     <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('login')">Login</a>
-        <a onclick="showPage('menu')">Menu</a>
+        <a onclick="showPage('collection')">Collection</a>
         <a onclick="showPage('about')">About</a>
-        <a onclick="showPage('feedback')">Feedback</a>
+        <a onclick="showPage('contact')">Contact</a>
     </nav>
 </header>
 
 <div class="container">
     <!-- Home Page -->
     <div id="home" class="page active">
-        <h2>Welcome to Ice Cream Paradise!</h2>
-        <p>Welcome to my Ice Cream Website!</p>
-Here you can explore tasty ice creams and fresh, healthy .
-Discover cool flavors, yummy scoops, and fresh fruit juices made just for you.</p>
-         
-        <img src="https://th.bing.com/th/id/OIP.5q40Z93lzEr4WLpLSUrIwQHaEl?w=291&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Delicious Ice Cream" style="display:block; margin: 20px auto; width:300px;">
-        <p>We serve the most delicious ice creams in town. From classic flavors to exotic creations, every scoop is made with love!</p>
+        <h2>Welcome to Fashion Vogue!</h2>
+        <p>Your destination for premium outfits, modern trends, and timeless styles.</p>
+        <img src="https://th.bing.com/th/id/OIP.x2MYdFvUaJa9eAAoY2-8ngHaE7?w=295&h=197&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Fashion Banner" style="display:block; margin: 20px auto; width:350px;">
     </div>
 
     <!-- Login Page -->
     <div id="login" class="page">
-        <h2>Login to Your Account</h2>
-        <form>
+        <h2>Login</h2>
+        <div class="form-container">
             <input type="text" placeholder="Username" required>
             <input type="password" placeholder="Password" required>
             <button type="submit">Login</button>
-        </form>
-        
+        </div>
     </div>
 
-    <!-- Menu Page -->
-    <div id="menu" class="page">
-        <h2>Our Delicious Ice Creams</h2>
-        <div class="menu-item">
-            <img src="data:image/webp;base64,UklGRrgQAABXRUJQVlA4IKwQAADQUACdASr4ALQAPp1GnUslo6KhpzNbYLATiWdu3V4118A54BVb/IjGt1bikXKbR1y7yfcCiAX9G8zOc99UsdR47/d8n/7T/xPYT6Un7pez3+25r2OMPOpIQHmN3gcYv60nrO4HowsdZfQmxVd5ZYVZuQzigHTfsnu3E/DaT8heMQErDN0rl588VU3EnrGdRP3O5GbPyIWVbfxCkid/1HPNtcgBcvEO34kBdPNUfFcyj6w+kT/sJX53TsNqfQGrU0tQNjhNPXyO3n7BRpdmKbbOAYhNpprHKNxL28yVJNppDxVPSaBnauIN4W5vHsebRpFbc7EtHmxVY6aO11qW+rQzM8M5JjuWNuDMzj+kAQMz30x91R4ctNmalHknPUHqC0L2tRxg2M2/XshJkyOK4EkYcU0s1rp1KFTKiWzie64jz0EyFz2UXou/NPJ2IU6fb35ry/ki+jKenIXh93xFckf4MymfULMdvDUwuVTokWU5qAn9yAbq3lmwoTI4/hDsFxKGLIu+aOe2JeFFTa4N+79I2TAvuN7QQNUEZUyGphxJoMiQ6HeFsdTKBfpSPiuqgNsEMqv5C8Yg92TOg6Uii2bKcCfUlJjU1GqDQM7ELLN1nN5yFf7HBps39YBR7c6WmyMld4+xLi56qcZHDlthSZ0BzuszGBZ3u+XffTnzoz1vhETY0SKwVQI6EE0y9mzGzdTGov+gaB+AmTKddgoNvNnFTTbc/AwgZhjWS/Qmh8JSlOlBQ+tkPACSo1bDvPBnFwVfca7TVX/PyJEFqfbsiDPo61HfJ4JC2I2shf93wSawH3iTYxJqU18Kv7INMF9JBzDN7cvRPxC5pNs1QmEYI35KK4YKPwawKpArOYgnuXYAAP77QAAGJHGrd1N1sF8wLoz4m5l/R/YymJ8scG+BLFTk6x3EM5htsOpNwI1UA2PTECMxx7pXTZLb0v+3AB5ED4MmTUliV2fp9b8upUL00RnUuh7LBYy63sxhNRb6/Xav12HTwE+S13KCgUJA3og/WaWvtnH702NC3LW+us2t75J0d8bY+aw3uzyEso38qI9Yvlte5I6h9BlBy5NMMA3N2g3CgQ1VQ9EF2/hbKfD9HbELSMSS24PQ2vNmMJpVPt/i/NleZbC/0WoRlNl5UK4bqZBojHi0aTVDMRsNNhDLeKbhrGdbBxbXCmd/5rMN3Yih2usC1rwT6CiyVLYPoAADVzq950DzL7Yx6JKP4r4JxVX6PNkSGDm78JBCcYcuTi5blswy3cQRZipSZSEyoZ+95/PkjAn7j09UC2Nz379BbIJSGGv1SKdSUVMU/2NyFYhwYptlr3PcFcyyN+FFoWSqg99LxHQ17naXHv0Z4FUh7y6jHxsmqsW/4jfr8fXyaz+f7fbnorGfcnLE1NpMPfb5G7nUActndID3wrX2U62zhAEhFNzHld1RxacaE1bP2XHHv9xacug+UeuFauweU+Etm16jv2gkpUghZoU7la39oznMzVEWClgKHR9waHX1+QOlAWtwevTPwzwtaqW+SgCsBTXP7LIlET7bkKaC4PYFKpIgSv/ACEOLKC22tXtPzsxSdQJXXDhbquii8UY879Ege8gO156FSgsKvQCrrkfIrskvC7cl4uBdNJ0MhveoOX/nz8jHVBqAGV7b1dB6uX+Jh1OLDacoMDY9twrBpcwyQ0ABs0ucS3yROssVcX3LO3Dfd7/9HDB1vVuOV74xkZqvxto6t2TQLZODf31k9y7Zq/y/bCwtjFa1aVh8gl2OSSG53w7wZw2okKWCgjVZe9sRWcraic6YmIgsVi7S6+O3tt9D5flQ6R1y85OWoMBG3+1l1vI21FgGsX+rGeSss7zFs51fjoPgh/EGmQ4+zwyv+t+fHwLljr0v6uB3Pl14RV29PljFnnRqPJAH+nX9S40FQNO01dCAiVCHi9MY8ci10+dM8zoFcQ5LdSSHxMqLlewPXkGZCMRy8fzTpvafChQMHDzFV1TuUFrasY9/mm/Xi22u/dqSg4sz7MiUuOvKRE4NGFo16xv4rjxUY7UIo0pMo0fft2nZLkITzSBoO0EcRMH94JYmDSUB+wrcvnFELFgJrZcm9eNzg6gZa6DumI446i/gkeEqJn+kGBdY6CFGi5j9QASt8+Pus/umgCg54/GCa8+caW2+YWg2Qs0uaqQpwP/BauKgXkmWGPGrSsK58eZqFcJKQgkzocz9bIVcfgtOp7xCbw/n707AxdrMzKybJgy4pc6uQlAYj+oLQOmxhGFssqrGBLOQTwD9X8Z/qe605ffCFgvmTMQTWeXMigMOmdFmWXVrjp7EtA7a9GIorOc+QJi8YmmoLL1Y8pZLZup7UfyTxy5e/7Er9cR+EO+840HoiOUZkoSFIBIINfh9m7LIuDCT+XANqsvCTmWd4oCVONSXd47bMzLsbd/yyNLSvpUjqyxg4aYE68kduZ0n45Gg/283ZfpcSul8kaClMVDP9VIDiBb0/cNjbeMUZQxyiZDFYHu65Unh1BAJj/vhPknDElaqP4oSRuEwZKQ/qTqPpJMUSr731PWcDZjcuw0397CNl1mIBJqCC1bdsK1+CyNMoFRirMrUAKhU7L21d9O5cr9O3fmbK46fSTx9oPlp2HMmYjn96Y1tQkCbPeQb/xeLXMflguAGyofDRkMlef+o1MguS/MfHwU/gmb2DhKRdLdYeLYbtgRdxzDvMuBh3QE28/pOR3rUAu+dIVk/fc8SmSTIibOzlUdN4qKjKzz0C+Ke1xAMQu4k7MrGomNIseKzra3dArc2xQT036wOzEhk4Y5vuy/aJRoUso3tryd3wPZbWaHhcWJ4QJGl3KTLncvPeNMjxe7l6tl+6n41iESBDl2rcxi2QVwdAMRhiH7RmgxkXOaWiLZseJF7Sgkf9wce9ru4XckbqzosKG1CgNzgSf7cn3ziZYfIesdNXYZEj3LIOpaC34CgKOiiEUUOaykbxPHL3H0HeVh9/8Pn1gFAizwZdnWLYBQ8oJZQ+AXusIc3lrO6c7vXkA1cm7+obTyCIYdBZCbjwgLwc6jaeOzW5EZkznv4AgIeuYOSZ9FpkMPVtL49I76LwHVRTBekPtgcImBF5betKEOtNvETvbZt8aWio0pkQayaxvMFa6sCJonvrXZBLNC3VJ9tdbTEl5jrsa9crG6b2VOJWZnQOI/NWxw+M82zALiKV5MpqzC9eq8NsgMb07ID/pmNBl2AO3FWEypkgtjnzyrWToM1PMt0oSNrcQtDg4P35egTCZipkp0tYeZrMy15ozRQBXEIsEi+02Fj41zEBTE1/yYCCrA1MJkAqCZqYFgthNbOgNgIwzsKvcApytJYqRsJjmqq1nQH0t0l9RJH0aUePpunrFhzKjpW1RiwakveL1SyIQrBEi5i+YK0e1F/4fn9KsCLLObNW22Ul0hl8bcGjV5B2fK1P1Pyrusw71uyR026XzHdS/tGl5dZ0LkfuCd5aHvnqc6WTpiuXnkCzBs7X0e40DXYUl7L07EYgkWpciT818as4nmALhArXf88tmXd2lWLbruoYTabzYcALKbZj3HHWaFe7MkX7G0jY7YMLzlDwt5Nwsa+nuYLvUbrKgVL7Usp/wvttKLBR/oDFd4uHRlr4Hw4OzID1EnnBa8R7PNX+WO26y+0sU/G5ULCzY2zG/QYMyAT3Fm2I+8GdFgehpnvz/tGsNpU+Yk9ePUl9N7WpEvzVJc9Hhv6Ua0rWl0lK0oInwFvnBy4aKcj0bP5lCBwDt+rx849tz5YzvdYm/ovs3wHH8y4hxpON78fVpU4Dz1Nu/IpLiobFeLoykv+ymAe1GyrtUM9LOE3NnWB+8XBCvGjeywhmtH9Zp5fcT/9ZW4z/T/Ulw/jP0hA6nFj55Gebp1rWtpbKx+8VQ03QF9tQlk4AI7cJEd39Tg+Zqvoxnf8fgJpfYsAhV9C5Cs7bd12mb4sTAhcGpTqnJmgvTqmwbRA7P9YyO7d/wvfOk62HmOGlnqVHsa5kijsl0gmcDCPsfgPsm9JPFTtH1b3cPep5J8oKCvKQAJ2eYmyJvxY7fBuFdobn8q2I6ASLHQJBfuaFg7IivqUa7Lwer2KBzAHndAxWALwBhWRUox/f1B3UmaVwfalHTBt5Y6tLSTJ3+SH6mYUSFmgsm+lhN168jFqHeYaUXtvN5R+hCcu4UMY3NelxCekWzyeTpSrH3Pv01QhJEAPTd7/UIyrY5Eo0TcFVd1kyWKbTMl5b2ztHxf61Ue93wxD9r4cSEQi1xcbFdWUMnX8A9VNvAZ8P731ZOAjgXlVEyfkvbdVdNAVLoH2OexxPDK4bCZ938wJaGEFCu6pSSx/BgUxrNPRQkPOi0wUwxhNesl/ddQjj1fsmhBDm7ov/jfI08+WveMNt9HpyfG/J4SI+CzvaJsufXIPKW2Ua/Fpl4TID9T4vznLI9t7ZkV6Q4WqqQLxWAy8iFqeEn+PvxZ9v8S5xxT5i1lxLJBjXwm4KqJqcV8ckfsKxtG/a7GHhkSVL2kwdihb+mbx8mbEAnCfbwzJGQGGPW3me88niHDj6pVCi5ZvR/gpH2Nt9V57JCc6FmLtprJKDEIgvEukM5J0fbVS54yzO4EQvretyWO2deHyzcGZnzyzHOEpnQwplcK+ZZteR2E8VtdoJVeF+RKGClynwq/r/I02uWcBn4VjorN/Ix44qEJ3PCsDtezYeIyXl5/ixebQbdDxCjkSREVBTamqHjTFcPdAzF4qLeF2nsWNjwMfVK5Xhzw53vyWNBV77wtL0fAxKbN6bQ6Q0CUviqrTYAfH4frrKXU9/MYtPfLvQW+oEZoVRZHOrgUIM2Sm07Jeos4xLwGgBe/RUQ2b+NnfF1YzMH2g9kzozYPhtV/W7IoLMlAzXhhTJEEDSYoErKULIxIvDxPguhp07vDYJSZ7bJvCRkNtFPkpEwesRTjx48gkjdJnthprcahB090ozLE5OgW2T7/NIayccfrHlnmu+Z1tKzDpVDO1P8LkXxtfSSNdw36WzWyMQR34bK0aIVC5deGsVvYZ0cardMsa7KoDWv6EUYN/5sqmd2ea6OWgNkDS4FIJA/mefJy3gkyulRCMc+IAlK8RuAw04rNR6+MsS3qWTchD5q/y+00LvLj7aAbe4WeyWk0RMavGsWh18Btd1WCgfCH1l9y9o7/8lBWyDv6uSGPLJ+OEO0DpkUgbMA9zH8+skdQOuMEVRHLzFqDS+fPRjV9qZWYuFKe4O4lnAAtHnZCmV8or4L947siVDsn6xrPYmShoFRQMrvmb/zDlE9rTVBtn20G9GqiCp6ly1VwjFeHiVdXKHJLJk4PniN7Dc9qlbwEy0ESC3tFGSCmjwwoi0PauGypJNGwK7WXYNI+9qznuc2Usun5FJkYvnWaBXEaMOriWv3Qk91DEofGeOn3Z5lGkwAXvfgiy8ix5ku2AuPEIj2UfqTS5IM2oow4fbLyWO0CN/pPbGmC9disvOZov9ZTpqQcL/pOE0330eKZEd7hqKcwcGKPHhpf3ijRBOwATAWSqCXpZab6rQ981NTIWIJ8JmOe4QeWL33qGWuM9XoO5xKOhQ65PueYIDPPyMU5XVxC0AdBg7BikfCy7y0cs5gacgo4+GTQrqEER2jYQUakZ+xdOH/1+sA1ARBnuIzvIr3zxCvCMlYgdbGWah5c7YWt+gtgeyuvL9fh6hJ7j5nbpILNgAA=="alt="Vanilla Ice Cream">
+    <!-- Collection Page -->
+    <div id="collection" class="page">
+        <h2>Our Latest Collection</h2>
+
+        <div class="product-item">
+            <img src="data:image/webp;base64,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" alt="Elegant Dress">
             <div>
-                <h3>Vanilla Delight</h3>
-                <p>Price: Rs.120</p>
+                <h3>Elegant Evening Dress</h3>
+                <p>Price: Rs.899</p>
             </div>
         </div>
-        <div class="menu-item">
-            <img src="https://th.bing.com/th/id/OIP.V8XYsoAuHJn3zKR2spbtegHaFW?w=244&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Chocolate Ice Cream">
+
+        <div class="product-item">
+            <img src="https://th.bing.com/th/id/OIP.q1CJJ2AKe7Vx1coUGPO-7gAAAA?w=139&h=212&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Leather Jacket">
             <div>
-                <h3>Choco Blast</h3>
-                <p>Price: Rs.100</p>
+                <h3>Premium Leather Jacket</h3>
+                <p>Price: Rs.1500</p>
             </div>
         </div>
-        <div class="menu-item">
-            <img src="https://th.bing.com/th/id/OIP.7S04c4itLKDlhaOKI9vWBgHaJQ?w=202&h=253&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Strawberry Ice Cream">
+
+        <div class="product-item">
+            <img src="data:image/webp;base64,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" alt="Designer Shoes">
             <div>
-                <h3>Strawberry Swirl</h3>
-                <p>Price: Rs.150</p>
+                <h3>Designer Heels</h3>
+                <p>Price: Rs.1000</p>
             </div>
         </div>
-        <div class="menu-item">
-            <img src="https://th.bing.com/th/id/OIP.TbiTKrJk60qOTuI_miUMnAHaLG?w=202&h=303&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Mint Ice Cream">
+
+        <div class="product-item">
+            <img src="https://th.bing.com/th/id/OIP._36dbfBttQ-Ix5HtX62QLQHaHa?w=158&h=150&c=6&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Handbag">
             <div>
-                <h3>Minty Fresh</h3>
-                <p>Price: Rs.130</p>
+                <h3>Luxury Handbag</h3>
+                <p>Price: Rs.2149</p>
             </div>
         </div>
     </div>
 
     <!-- About Page -->
     <div id="about" class="page">
-        <h2>About Ice Cream Paradise</h2>
-        <p>Ice Cream Paradise started with a simple mission: to bring happiness in every scoop. Using fresh ingredients and unique flavors, we create ice creams that make every visit special.</p>
-      
-        <p>Come and enjoy your favorite flavor today!</p>
-        <img src="https://th.bing.com/th/id/OIP.E5FTKJRRvNI5LBvIqmJwZwHaE8?w=296&h=197&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Our Ice Cream Shop" style="display:block; margin: 20px auto; width:300px;">
+        <h2>About Fashion Vogue</h2>
+        <p>Fashion Vogue brings you trendy, elegant, and exclusive fashion pieces. Our mission is to make everyone feel confident and stylish.</p>
+        <p>We source high-quality materials and design each outfit with passion.</p>
+        <img src="https://th.bing.com/th/id/OIP.Zpax0G5JcPHdH5m0ZNEfNwHaE7?w=266&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Fashion Studio" style="display:block; margin: 20px auto; width:350px;">
     </div>
 
-    <!-- Feedback Page -->
-    <div id="feedback" class="page">
-        <h2>Feedback</h2>
-            <p> Thank you for visiting our Ice Cream & Juice website. Please share your valuable feedback.</p>
- <p>Your suggestions help us improve. Let us know what you liked or what we can do better.</p>
-<p>Please fill in the form below to share your experience with our products.</p>
-<p>We appreciate your time! Tell us how we can make our website and menu more enjoyable.</p>
-
-    <p>We would love to hear from you! Please share your thoughts and suggestions. </p>
-        <form>
-            <input type="text" placeholder="Enter Your Name" required>
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <h2>Contact Us</h2>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+        <div class="form-container">
+            <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Phone Number" required>
-            <textarea rows="5" placeholder="Send Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-        <p>Our contact:📞 +91 12345 43215, +91 67877 98076</p>
-        <p>OUR SHOP AVAILABLE IN THE: KARWAR, ANKOLA, KUMATA, HONNAVAR.</p>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
     </div>
 </div>
 
 <footer>
-    &copy; 2025 Ice Cream Paradise
+    &copy; 2025 Fashion Vogue
 </footer>
 
 <script>
     function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        document.querySelectorAll('.page').forEach(page =>
+            page.classList.remove('active')
+        );
+
         document.getElementById(pageId).classList.add('active');
     }
 </script>
